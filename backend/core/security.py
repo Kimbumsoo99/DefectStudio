@@ -1,12 +1,3 @@
-from passlib.context import CryptContext
-from datetime import datetime, timedelta
-
-from sqlalchemy.util import deprecated
-
-bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
-
-def verify_password(plain_password, hashed_password):
-    return bcrypt_context.verify(plain_password, hashed_password)
-
-def hash_password(password):
-    return bcrypt_context.hash(password)
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9dab2e2d2b08edc95e64277eaca03aa595818f68ff2b5fe030ee71776986cfa
+size 2136
