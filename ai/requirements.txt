@@ -1,7 +1,3 @@
-boto3==1.35.8
-botocore==1.35.8
-jmespath==1.0.1
-python-dateutil==2.9.0.post0
-s3transfer==0.10.2
-six==1.16.0
-urllib3==2.2.2
+version https://git-lfs.github.com/spec/v1
+oid sha256:d80b7868ca9842f542623d61eaaeaa9cc801b89f9fdc8013e7f2aa3aa193b4a8
+size 597
