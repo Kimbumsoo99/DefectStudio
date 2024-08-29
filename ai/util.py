@@ -1,8 +1,3 @@
-import boto3
-from config import settings
-
-s3_client = boto3.client(
-    "s3",
-    aws_access_key_id=settings.AWS_S3_ACCESS_KEY,
-    aws_secret_access_key=settings.AWS_S3_PRIVATE_KEY
-)
+version https://git-lfs.github.com/spec/v1
+oid sha256:09d960263521cfd3f699e191e294230100685e5fab54093308f6eebcde982560
+size 1285
