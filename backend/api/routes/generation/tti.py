@@ -1,16 +1,3 @@
-from fastapi import APIRouter
-import requests
-
-from api.routes.generation.schema import TTIRequest
-from core.config import settings
-
-router = APIRouter(
-    prefix="/tti",
-)
-
-
-@router.post("")
-def text_to_image(request: TTIRequest):
-    payload = request.model_dump()
-    response = requests.post(settings.AI_SERVER_URL + "/tti", data=payload)
-    return response
+version https://git-lfs.github.com/spec/v1
+oid sha256:d21f3678c3eef8ae61704da97b7814cf4b2f0a4406fa63402ad411b3f614ade0
+size 619
