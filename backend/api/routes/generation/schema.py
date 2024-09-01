@@ -1,15 +1,3 @@
-from typing import Optional
-
-from pydantic import BaseModel, Field
-
-class TTIRequest(BaseModel):
-    model: str = Field(...)
-    prompt: str = Field(...)
-    negative_prompt: Optional[str] = Field(None)
-    width: Optional[int] = Field(512)
-    height: Optional[int] = Field(512)
-    num_inference_steps: Optional[int] = Field(50)
-    guidance_scale: Optional[float] = Field(7.5)
-    seed: Optional[int] = Field(-1)
-    batch_count: Optional[int] = Field(1)
-    batch_size: Optional[int] = Field(1)
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b2718b0eed65b5678e346d5d68220ffd48b31168ce3a1fbe9f2f495ae8c7a3a
+size 550
