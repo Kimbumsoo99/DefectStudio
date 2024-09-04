@@ -1,14 +1,3 @@
-from fastapi import APIRouter
-from sqlalchemy.orm import Session
-from dependencies import get_db
-from fastapi import HTTPException, Response, status, Depends
-import crud
-
-router = APIRouter(
-    prefix="/departments",
-    tags=["departments"]
-)
-
-@router.get("")
-async def get_departments(session: Session = Depends(get_db)):
-    return crud.get_departments(session)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b586379041252a40a3a6182ea6ac6894057b85e479b347b81e99f28f7dc3fc7
+size 917
