@@ -1,22 +1,3 @@
----
-name: Test
-title: "[Test] TITLE"
-labels: ✅Test✅
-assignees: ""
----
-
-## ✅ Description
-
-<!-- 테스트 하고자 하는 기능에 대해 작성해 주세요. -->
-
-1. 기능 1
-2. 기능 2
-
-## 📝 Check Point
-
-<!-- 기능별 세부 엣지케이스를 체크 리스트로 작성해주세요. -->
-
-- 기능 1
-- [x] 엣지 케이스 1
-- [ ] 엣지 케이스 2
-- [ ] 엣지 케이스 3
+version https://git-lfs.github.com/spec/v1
+oid sha256:49c18e0639afa78c7685ba16e3e9f781e64fc3988c39bce0fc2a19e2089a452b
+size 388

@@ -1,17 +1,3 @@
----
-name: Docs
-title: "[Docs] TITLE"
-labels: 📝Docs📝
-assignees: ""
----
-
-## 📝 Description
-
-<!-- 작성하고자하는 내용에 대해 작성해 주세요. -->
-
-## 📝 Check Point
-
-<!-- 작성 내용 리스트로 작성해주세요. -->
-
-- [x] 작성 내용 1
-- [ ] 작성 내용 2
+version https://git-lfs.github.com/spec/v1
+oid sha256:4500c1ca35b34a14fc9b9f2d0bac8b1351772eb8e49efc1efdbbf008c1ce188b
+size 290
