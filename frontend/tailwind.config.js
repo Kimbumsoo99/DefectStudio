@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5805092aeee7d98b9ebaeba18c604bb2cd4d3a1e47169e04c98013987e41d86d
-size 321
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        samsung: ['SamsungSharpSans'],
+        helvetica: ['helvetica-neue-55'],
+        Gmarket: ['GmarketSansMedium']
+      }
+    }
+  },
+  plugins: []
+};
