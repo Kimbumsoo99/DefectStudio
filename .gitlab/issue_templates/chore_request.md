@@ -1,18 +1,3 @@
----
-name: Chore
-title: "[Chore] TITLE"
-labels: 🚚Chore✏️
-assignees: ""
----
-
-## 🤷‍♂️ Description
-
-<!-- 수정사항에 대해 작성해 주세요. -->
-
-## 📝 Check Point
-
-<!-- 세부 수정 사항을 리스트로 작성해주세요. -->
-
-- [x] 세부 수정 사항 1
-- [ ] 세부 수정 사항 2
-- [ ] 세부 수정 사항 3
+version https://git-lfs.github.com/spec/v1
+oid sha256:bdd5b267bdfb319f3c412e2ff98b95cb6d955f9509176029eadf97ad3ba0f4fe
+size 334
