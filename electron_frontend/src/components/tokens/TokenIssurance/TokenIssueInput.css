@@ -1,12 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.token-issurance-input-container {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  margin-top: 20px;
-
-  @apply border-2 border-gray-300 rounded-lg w-full h-[360px] text-[222222] dark:text-white font-samsung;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea2bcdfdc6939f768bfab761c237fb2dc041641e541db303740c729dd20cc625
+size 650
