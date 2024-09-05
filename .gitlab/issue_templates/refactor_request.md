@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a53f250b415326adc99ece4ef3432c0c3a651982fa63d197927d08f282e33f1
-size 333
+---
+name: Refactor
+title: "[Refactor] TITLE"
+labels: ♻️Refactor♻️
+assignees: ""
+---
+
+## ♻️ Description
+
+<!-- 리팩토링하고자 하는 것에 대해 작성해 주세요. -->
+
+## 📝 Check Point
+
+<!-- 리팩토링 사항을 리스트로 작성해주세요. -->
+
+- [x] 리팩토링 사항 1
+- [ ] 리팩토링 사항 2
