@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c9d19994ac464bd93cce29ef530ed445b94b2be873c361f033b4c9095d8d2730
-size 383
+import axios from "axios";
+
+type departmentType = {
+  department_id: number;
+  department_name: string;
+};
+
+export const getAllDepartments = async () => {
+  try {
+    const response = await axios.get<departmentType[]>(
+      "http://j11s001.p.ssafy.io:8000/api/departments"
+    );
+    return response;
+  } catch (error) {
+    throw new Error("Failed to get all departments");
+  }
+};

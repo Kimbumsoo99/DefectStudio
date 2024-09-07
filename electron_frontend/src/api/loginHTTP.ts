@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a949f492e14bef8f523d5e2219886dcade7713722e95c953796ec2324d7cc238
-size 303
+export const loginRequest = async (username: string, password: string) => {
+  const response = await fetch("https://13.125.235.189/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ username, password }),
+  });
+  return response;
+};
