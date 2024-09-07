@@ -1,13 +1,3 @@
-import SearchDepartments from "./SearchDepartments";
-import TokenIssueInput from "./TokenIssueInput";
-
-const TokenIssurance = () => {
-  return (
-    <section className="flex flex-col justify-center align-middle">
-      <SearchDepartments />
-      <TokenIssueInput />
-    </section>
-  );
-};
-
-export default TokenIssurance;
+version https://git-lfs.github.com/spec/v1
+oid sha256:ceccdb118ae7296838a8506463030e8316e010f87eb8383d07b6da79c9e787a0
+size 2061
