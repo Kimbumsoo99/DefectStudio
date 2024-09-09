@@ -1,17 +1,3 @@
-import { configureStore } from '@reduxjs/toolkit';
-import levelReducer from './slices/levelSlice';
-import themeReducer from './slices/themeSlice';
-import userInfoSlice from './slices/userInfoSlice';
-
-const store = configureStore({
-  reducer: {
-    level: levelReducer,
-    theme: themeReducer,
-    userInfo: userInfoSlice
-  }
-});
-
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
-
-export default store;
+version https://git-lfs.github.com/spec/v1
+oid sha256:924fe0d6aaa7e68a9866dad4dfeb7c753834cd7e0b20324872d582b8657ed572
+size 877
