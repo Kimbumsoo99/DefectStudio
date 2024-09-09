@@ -1,19 +1,3 @@
-export interface signUpFormType {
-  login_id: string;
-  password: string;
-  name: string;
-  nickname: string;
-  email: string;
-  role: 'super_admin' | 'department_member' | 'department_admin';
-  department_id: number;
-}
-
-export type userInfo = Omit<signUpFormType, 'password'> & {
-  isLogined: boolean;
-  token: string;
-};
-
-export interface loginData {
-  username: string;
-  password: string;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c9ce3c386433bf4acc106ac8119169201cf4230bc1e1f1e45dfa99b67b51387
+size 292
