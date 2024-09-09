@@ -1,15 +1,3 @@
-import axios from "axios";
-import { signUpFormType } from "../types/user";
-
-export const signupHTTP = async (data: signUpFormType) => {
-  try {
-    const response = axios.post("http://localhost:4000/signup", data, {
-      headers: {
-        "Content-Type": "",
-      },
-    });
-    return response;
-  } catch (error) {
-    throw new Error("Signup failed");
-  }
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:1aa1a51f63cce493cc5fac7a18abc69efd490f863488eeb85173a160cbd05759
+size 404
