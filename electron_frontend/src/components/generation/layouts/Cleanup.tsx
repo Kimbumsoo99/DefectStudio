@@ -1,17 +1,3 @@
-import Sidebar from "../sidebar/CleanupSidebar";
-
-const Cleanup = () => {
-  return (
-    <div className="flex h-[calc(100vh-60px)] pt-4 pb-6">
-      {/* 사이드바 */}
-      <div className="w-[340px] px-8 h-full">
-        <Sidebar />
-      </div>
-
-      {/* 메인 컨텐츠 */}
-      <div className="flex-1 flex flex-col justify-end px-8 w-full"></div>
-    </div>
-  );
-};
-
-export default Cleanup;
+version https://git-lfs.github.com/spec/v1
+oid sha256:6bb6d94edeb595c84284d6763d6c0b9bb9a4841313b17be6db922e7822ab267e
+size 400
