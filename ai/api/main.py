@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:150913188dc6c5d62dfcbcdfd18175bdc67234c319f59b492ef0c5f2af0f6368
-size 417
+from fastapi import APIRouter
+
+from .routes import tti, iti, inpainting, rembg, cleanup, util
+
+api_router = APIRouter(
+    prefix="/api",
+    tags=["Image Generation API"]
+)
+
+api_router.include_router(tti.router)
+api_router.include_router(iti.router)
+api_router.include_router(inpainting.router)
+api_router.include_router(rembg.router)
+api_router.include_router(cleanup.router)
+api_router.include_router(util.router)
