@@ -1,15 +1,3 @@
-from fastapi import APIRouter
-
-from api.routes.generation import tti, iti, inpainting, rembg, cleanup, clip
-
-router = APIRouter(
-    prefix="/generation",
-    tags=["generation"]
-)
-
-router.include_router(tti.router)
-router.include_router(iti.router)
-router.include_router(inpainting.router)
-router.include_router(rembg.router)
-router.include_router(cleanup.router)
-router.include_router(clip.router)
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f5b7723826175793782370dd4af1727488106ca38e003f1881e6e6e4440cde2
+size 619
