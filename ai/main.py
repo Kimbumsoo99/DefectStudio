@@ -1,11 +1,3 @@
-import uvicorn
-from fastapi import FastAPI
-
-from api.routes.main import api_router
-
-app = FastAPI()
-app.include_router(api_router)
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8001)
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:930acac17ebc1858a83caead5aae9e896ac9dfb31b97093a92614a8a5c5d5032
+size 1348
