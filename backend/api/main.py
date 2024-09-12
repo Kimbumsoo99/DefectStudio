@@ -1,13 +1,3 @@
-from fastapi import APIRouter
-from .routes import auth, members, admin, departments
-from .routes.generation import main as generation
-from .routes.device import main as device
-
-api_router = APIRouter()
-
-api_router.include_router(auth.router)
-api_router.include_router(members.router)
-api_router.include_router(admin.router)
-api_router.include_router(generation.router)
-api_router.include_router(departments.router)
-api_router.include_router(device.router)
+version https://git-lfs.github.com/spec/v1
+oid sha256:a65e5a034dcafac5022cb1706b1d55c613c041fa7d5d828b08562dc645d5915c
+size 544
