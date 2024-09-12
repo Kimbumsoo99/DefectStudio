@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:19b570894e67d20a14c66d2604f4ad3bdf1fe1528dd00a48a0d2ee4a6990c1bb
-size 4713
+import { Button } from 'antd';
+import { RiSparkling2Fill } from 'react-icons/ri';
+
+interface GenerateButtonProps {
+  onClick: () => void;
+}
+
+const GenerateButton = ({ onClick }: GenerateButtonProps) => {
+  return (
+    <Button type="primary" icon={<RiSparkling2Fill className="mr-2" />} shape="round" size="large" onClick={onClick}>
+      Generate
+    </Button>
+  );
+};
+
+export default GenerateButton;
