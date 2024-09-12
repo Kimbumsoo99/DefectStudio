@@ -1,14 +1,3 @@
-from fastapi import APIRouter
-
-router = APIRouter(
-    prefix="/dreambooth",
-)
-
-@router.post("/{gpu_env}")
-def dreambooth(gpu_env: GPUEnvironment):
-
-
-    return JSONResponse(
-        status_code=status.HTTP_200_OK,
-        content={"content": "학습 요청 성공"}
-    )
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e5a7868762ea9c62703eda8daa9eb32121c9c1ce6641d4c356dafc5291ccbb2
+size 10457
