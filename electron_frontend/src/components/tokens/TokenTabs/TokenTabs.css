@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b34113f25ad8136baaabe04fe45e82e82a6b5cdfa23d649532c3c5fcd22a64d
-size 435
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.token-tab-default {
+  @apply inline-block p-4 font-samsung text-[15px];
+}
+
+.token-tab-inactive {
+  @apply text-[#b2b2b2] dark:text-gray-300;
+}
+
+.token-tab-inactive:hover {
+  @apply bg-gray-300 hover:dark:bg-slate-800 border-b-2 border-black dark:border-white;
+}
+
+.token-tab-active {
+  @apply border-b-2 text-black dark:text-white font-bold border-black dark:border-white;
+}
