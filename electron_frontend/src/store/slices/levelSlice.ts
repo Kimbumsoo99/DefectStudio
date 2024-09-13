@@ -1,18 +1,3 @@
-import { createSlice } from '@reduxjs/toolkit';
-
-export type LevelState = 'Basic' | 'Advanced';
-
-const initialState: LevelState = 'Basic';
-
-const levelSlice = createSlice({
-  name: 'level',
-  initialState,
-  reducers: {
-    setLevel(_, action) {
-      return action.payload;
-    },
-  },
-});
-
-export const { setLevel } = levelSlice.actions;
-export default levelSlice.reducer;
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbcbd59f3b1beb525c82756898e6ce396949b9d4fc3a2468ae1f20d2864da813
+size 375
