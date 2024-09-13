@@ -1,11 +1,3 @@
-import TokenStatisticsHeader from './TokenStatisticsHeader';
-
-const TokenStatistics = () => {
-  return (
-    <section className="flex flex-col justify-center align-middle">
-      <TokenStatisticsHeader />
-    </section>
-  );
-};
-
-export default TokenStatistics;
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef78fbfd040e698eab09dcbb929d89a6f209b6f19d5c2585bada93e3e708fe87
+size 749
