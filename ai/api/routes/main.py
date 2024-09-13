@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:79f601fba792cd626252afdd855b18db9fbf7d69a6751710755dbcdda045a267
-size 240
+from fastapi import APIRouter
+from .generation import main as generation
+from .device import main as device
+from .training import main as training
+
+api_router = APIRouter(
+    prefix="/api"
+)
+
+api_router.include_router(generation.router)
+api_router.include_router(training.router)
+api_router.include_router(device.router)
