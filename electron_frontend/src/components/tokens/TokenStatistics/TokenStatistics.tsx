@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2c0e474f23c4421137c7e0cfc5d6264853d31e94ddf352443955bc4ba46f79d7
-size 433
+import { useState } from 'react';
+import SearchDepartments from '../TokenIssurance/SearchDepartments';
+
+const TokenStatistics = () => {
+  const [departmentsId, setDepartmentsId] = useState<number[]>([]);
+  return (
+    <section className="flex flex-col justify-center align-middle">
+      <SearchDepartments departmentsId={departmentsId} setDepartmentsId={setDepartmentsId} />
+    </section>
+  );
+};
+
+export default TokenStatistics;
