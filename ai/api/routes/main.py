@@ -1,15 +1,3 @@
-from fastapi import APIRouter
-from .generation import main as generation
-from .device import main as device
-from .training import main as training
-from .model import main as model
-
-
-api_router = APIRouter(
-    prefix="/api"
-)
-
-api_router.include_router(generation.router)
-api_router.include_router(training.router)
-api_router.include_router(device.router)
-api_router.include_router(model.router)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b60f65ded5cbc6e72063082825301a2c7066a48d095fa5c65049946a9ed41b5d
+size 396
