@@ -1,13 +1,3 @@
-export interface txtToImgData {
-  model: string;
-  prompt: string;
-  negative_prompt: string;
-  width: number;
-  height: number;
-  num_inference_steps: number;
-  guidance_scale: number;
-  seed: number;
-  batch_count: number;
-  batch_size: number;
-  output_path: string;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:848b6df47bcb3f3612a3bcd064c2eb9cff62e9090322c48f2390a617e8e2f717
+size 2097
