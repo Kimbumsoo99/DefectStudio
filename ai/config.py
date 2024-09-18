@@ -1,15 +1,3 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
-
-
-class Settings(BaseSettings):
-    model_config = SettingsConfigDict(
-        env_file=".env", env_ignore_empty=True, extra="ignore"
-    )
-
-    # ENVIRONMENT
-    AWS_S3_BUCKET: str
-    AWS_S3_REGION_STATIC: str
-    AWS_S3_ACCESS_KEY: str
-    AWS_S3_SECRET_KEY: str
-
-settings = Settings()  # type: ignore
+version https://git-lfs.github.com/spec/v1
+oid sha256:49a3169b511e704131f47334f3ba918d648b10cb873f894b3fc999ce0068bc7f
+size 368
