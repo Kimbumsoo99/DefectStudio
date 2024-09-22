@@ -1,10 +1,3 @@
-// validation_prompt: 검증 프롬프트
-// num_validation_images: 검증에 사용할 이미지 수
-// validation_steps: 검증 간격
-// validation_scheduler: 검증에 사용할 스케줄러 (Optional)
-
-const ValidationParams = () => {
-  return <div>validationParams</div>;
-};
-
-export default ValidationParams;
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2b7d44349c8f044075565e2ee9ea5a9c47fa988fb04cb4f103801757b8847c8
+size 1111
