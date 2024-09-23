@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:27d72b9152b15d574fcbed517bafebc004ea335d5d8bd83cc28fab1407502583
-size 355
+from pydantic import BaseModel
+from models import Department
+
+class DepartmentRead(BaseModel):
+    department_id: int
+    department_name: str
+
+    @classmethod
+    def from_orm(cls, department: 'Department') -> 'DepartmentRead':
+        return cls(
+            department_id=department.department_id,
+            department_name=department.name
+        )
