@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ef875e80de560950dffb97ea2fd6a25225a8323344caa8e6d7dbe2d8c769a41e
-size 352
+// adam_beta1: Adam 옵티마이저의 Beta1 값
+// adam_beta2: Adam 옵티마이저의 Beta2 값
+// adam_weight_decay: 가중치 감쇠 값
+// adam_epsilon: Adam 옵티마이저의 Epsilon 값
+// max_grad_norm: 그래디언트 클리핑 최대 노름
+
+const OptimizerParams = () => {
+  return <div>optimizer</div>;
+};
+
+export default OptimizerParams;
