@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3a92898a945753263c6129cbf599fd7aa1190ddce618c9eb7d73bab6cad9fbb4
-size 206
+from typing import List, Union, Optional
+
+from pydantic import BaseModel
+
+class GenerationTaskResponse(BaseModel):
+    status: str
+    type_of_result: str
+    result: Optional[Union[List[str], List[bytes]]]
