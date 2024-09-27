@@ -1,12 +1,3 @@
-from typing import Optional, List, Union
-
-from pydantic import BaseModel
-
-
-class CeleryTaskResponse(BaseModel):
-    task_name: str
-    task_status: str
-    task_arguments: dict
-    result_data_type: Optional[str] = None
-    result_data: Optional[Union[List[str], str]] = None
-    message: Optional[str] = None
+version https://git-lfs.github.com/spec/v1
+oid sha256:8e89207eea709325b867490c0d24b4cca97dd81c046a6698af92d0ab12e695a5
+size 702
