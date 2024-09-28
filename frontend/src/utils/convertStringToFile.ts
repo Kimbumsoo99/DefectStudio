@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:adf3a5791feda77e392b1af81247d8867ec830f03b736be70e31ddd1a89ee0ec
-size 361
+export const convertStringToFile = (base64Data: string, fileName: string) => {
+  const arr = base64Data.split(',');
+  const mime = arr[0].match(/:(.*?);/)![1];
+  const bstr = atob(arr[1]);
+  let n = bstr.length;
+  const u8arr = new Uint8Array(n);
+
+  while (n--) {
+    u8arr[n] = bstr.charCodeAt(n);
+  }
+
+  return new File([u8arr], fileName, { type: mime });
+};
