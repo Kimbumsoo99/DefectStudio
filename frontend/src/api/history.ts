@@ -1,17 +1,3 @@
-import axiosInstance from './token/axiosInstance';
-
-// 생성된 이미지 목록 조회 함수
-export const getImgsList = async () => {
-  try {
-    const response = await axiosInstance.get('/generation/log');
-
-    if (response.status === 200) {
-      return response.data;
-    } else {
-      throw new Error('Failed to get imgs-list');
-    }
-  } catch (error) {
-    console.error(error);
-    throw new Error('Failed to get imgs-list');
-  }
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:5463a296dff0f68d8a4aaad411eb84c6d2a58443c4f4adac548602cf774296fc
+size 1277
