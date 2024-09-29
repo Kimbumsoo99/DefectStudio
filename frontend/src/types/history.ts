@@ -1,8 +1,3 @@
-export interface FolderDataType {
-  id: string;
-  generation_type: 'text_to_image' | 'image_to_image' | 'inpainting' | 'remove_background' | 'cleanup';
-  date: string;
-  prompt: string | null;
-  num_of_generated_images: number;
-  first_image_url: string;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3bb01eaa61df3103d965337326aeea12a6962ad59d7620a80e57abbb6159a445
+size 844
