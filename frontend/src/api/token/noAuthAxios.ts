@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e683b7365790edaf252bfbe1ee38bc460943b39f548f733d0195d79253ad917b
-size 314
+// 토큰 필요없는 함수일 경우
+import axios from 'axios';
+
+const BASE_URL = import.meta.env.VITE_API;
+
+const noAuthAxios = axios.create({
+  baseURL: BASE_URL,
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json'
+  },
+  withCredentials: true
+});
+
+export default noAuthAxios;
