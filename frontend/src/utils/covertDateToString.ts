@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:67e0edddf60b028c13a33307bde391ef10ca8c4f6fe34768935defe481fbad98
-size 260
+export const convertDateToString = (date: Date): string => {
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  const day = date.getDate().toString().padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
