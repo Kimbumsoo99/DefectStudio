@@ -1,7 +1,3 @@
-const Model = () => {
-  return (
-    <div className="flex justify-center items-center h-[calc(100vh-60px)] bg-gray-100 p-4 overflow-hidden dark:bg-gray-800"></div>
-  );
-};
-
-export default Model;
+version https://git-lfs.github.com/spec/v1
+oid sha256:c09c4651fa312c42439b405a3f3167aa4688c4c93bc2d88d2f6c0339d07089a2
+size 2983
