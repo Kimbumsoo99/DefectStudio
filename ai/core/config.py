@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4ced3cfc011059d7c3648a7178b5ca8464adbb4038c0059353385a79ec54c8ec
-size 440
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+class Settings(BaseSettings):
+    model_config = SettingsConfigDict(
+        env_file=".env", env_ignore_empty=True, extra="ignore"
+    )
+
+    # ENVIRONMENT
+    OUTPUT_DIR: str
+    DIFFUSERS_TRAIN_PATH: str
+    BASE_MODEL_NAME: str
+
+    # LOGGER
+    SENTRY_DSN: str
+
+    # REDIS
+    REDIS_HOST: str
+    REDIS_PORT: str
+
+# 환경 변수 로드 및 검증
+settings = Settings()
