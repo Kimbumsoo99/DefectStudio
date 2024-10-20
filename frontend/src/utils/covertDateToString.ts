@@ -1,6 +1,3 @@
-export const convertDateToString = (date: Date): string => {
-  const year = date.getFullYear();
-  const month = (date.getMonth() + 1).toString().padStart(2, "0");
-  const day = date.getDate().toString().padStart(2, "0");
-  return `${year}-${month}-${day}`;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:c01362f137612327795026818472627b965688f20d5e9c8171b5972c1b358b35
+size 266
