@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f9fdf71aaaea73539c002df538a74dde75655d8023e702c40f2d43b47693f27
-size 619
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+interface SettingsState {
+  gpuNum: number;
+  maxImgsNum: number;
+}
+
+const initialState: SettingsState = {
+  gpuNum: 3,
+  maxImgsNum: 100
+};
+
+const settingsSlice = createSlice({
+  name: 'settings',
+  initialState,
+  reducers: {
+    setGpuNum: (state, action: PayloadAction<number>) => {
+      state.gpuNum = action.payload;
+    },
+    setMaxImgsNum: (state, action: PayloadAction<number>) => {
+      state.maxImgsNum = action.payload;
+    }
+  }
+});
+
+export const { setGpuNum, setMaxImgsNum } = settingsSlice.actions;
+export default settingsSlice.reducer;

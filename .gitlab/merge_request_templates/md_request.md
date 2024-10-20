@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5b30eff2d0324b1f5439a0a2bfbfd3ee4508f58db9d58f8855703e562912865e
-size 674
+## 🔀 Description
+
+<!-- 구현 한 기능에 대해 작성해 주세요. -->
+
+## 📝 Primary Commits
+
+<!-- 세부 구현 사항을 리스트로 작성해주세요. -->
+
+- [x] 세부 구현 사항 1
+- [ ] 세부 구현 사항 2
+- [ ] 세부 구현 사항 3
+
+## 📷 Screenshots
+
+<!--스크린샷으로 보여줄 수 있는 이미지가 있다면 첨부해주세요!-->
+
+<!--BE의 경우 API 테스트 결과를 첨부해주세요-->
+
+<!--이슈 생성 시 Milestone 및 label 설정을 했는지 확인해 주세요!-->
+
+## Issue
+
+<!-- ex) -->
+<!-- closes #1 -->
+
+## Jira Issue
+
+<!-- 지라와 연관된 이슈가 있으면 작성해 주세요 -->
+<!-- #S11P21S001-12 -->

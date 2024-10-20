@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4f837c9941ef3b1a55ea3f23fc8f27973b17ad6525a36c727a2555b84cdb8483
-size 778
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+interface OutputState {
+  isLoading: boolean;
+  taskId: string[];
+}
+
+const initialState: OutputState = {
+  isLoading: false,
+  taskId: []
+};
+
+const outputSlice = createSlice({
+  name: 'trainingOutput',
+  initialState,
+  reducers: {
+    setIsLoading: (state, action: PayloadAction<boolean>) => {
+      state.isLoading = action.payload;
+    },
+    addTaskId: (state, action: PayloadAction<string>) => {
+      state.taskId.push(action.payload);
+    },
+    removeTaskId: (state, action: PayloadAction<string>) => {
+      state.taskId = state.taskId.filter((id) => id !== action.payload);
+    }
+  }
+});
+
+export const { setIsLoading, addTaskId, removeTaskId } = outputSlice.actions;
+
+export default outputSlice.reducer;

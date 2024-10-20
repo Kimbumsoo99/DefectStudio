@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9da5f17b8900bb6dbd511581f2539a7d00bdd9336a950bd38b7d9eca9b8bd1ed
-size 1011
+from celery import Celery
+from core.config import settings
+
+celery_app = Celery(
+    __name__,
+    broker=f"redis://{settings.REDIS_HOST}:{settings.REDIS_PORT}/0",
+    backend=f"redis://{settings.REDIS_HOST}:{settings.REDIS_PORT}/0"
+)
+
+celery_app.autodiscover_tasks([
+    'workers.tasks.generation',
+    'workers.tasks.model',
+    'workers.tasks.training',
+], force=True)
+
+# 큐 설정
+celery_app.conf.task_queues = {
+    'gen_queue': {
+        'exchange': 'gen_queue',
+        'routing_key': 'gen_queue',
+    },
+    'tra_queue': {
+        'exchange': 'tra_queue',
+        'routing_key': 'tra_queue',
+    },
+}
+
+celery_app.conf.update(
+    task_serializer='pickle',           # 작업 직렬화 방법
+    result_serializer='pickle',         # 결과 직렬화 방법
+    accept_content=['pickle', 'json'],  # 수락할 직렬화 형식
+    result_extended=True,               # 더 많은 task 정보 불러오기
+    task_track_started=True,            # 작업의 status가 STARTED일 때부터 추적하기
+)

@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:296c2e794515c6be6454d83bd3679867385a6d54744dd22e58be803de1df71a2
-size 1363
+import { defineConfig } from 'vite';
+import path from 'node:path';
+import electron from 'vite-plugin-electron/simple';
+import react from '@vitejs/plugin-react';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    electron({
+      main: {
+        // Shortcut of `build.lib.entry`.
+        entry: 'electron/main.ts'
+      },
+      preload: {
+        // Shortcut of `build.rollupOptions.input`.
+        // Preload scripts may contain Web assets, so use the `build.rollupOptions.input` instead `build.lib.entry`.
+        input: path.join(__dirname, 'electron/preload.ts')
+      },
+      // Ployfill the Electron and Node.js API for Renderer process.
+      // If you want use Node.js in Renderer process, the `nodeIntegration` needs to be enabled in the Main process.
+      // See 👉 https://github.com/electron-vite/vite-plugin-electron-renderer
+      renderer:
+        process.env.NODE_ENV === 'test'
+          ? // https://github.com/electron-vite/vite-plugin-electron-renderer/issues/78#issuecomment-2053600808
+            undefined
+          : {}
+    })
+  ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        }
+      }
+    }
+  }
+});

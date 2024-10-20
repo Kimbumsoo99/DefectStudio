@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f3a555dae69554467dfacdbf80a7c238aebe52906628f3634bd8b3f8c2deba2a
-size 817
+import axios from 'axios';
+import axiosInstance from './token/axiosInstance';
+
+export type departmentType = {
+  department_id: number;
+  department_name: string;
+};
+
+export const getAllDepartments = async () => {
+  try {
+    const response = await axios.get<departmentType[]>('http://j11s001.p.ssafy.io:8000/api/departments');
+    return response;
+  } catch (error) {
+    throw new Error('Failed to get all departments');
+  }
+};
+
+export type DepartmentPersonType = {
+  name: string;
+  nickname: string;
+  token_quantity: number;
+  member_id: number;
+};
+
+export const getDepartmentPeople = async (department_id: number) => {
+  try {
+    const response = await axiosInstance.get(`/departments/${department_id}/members`);
+    return response;
+  } catch (error) {
+    throw new Error('Unexpected error occurred');
+  }
+};

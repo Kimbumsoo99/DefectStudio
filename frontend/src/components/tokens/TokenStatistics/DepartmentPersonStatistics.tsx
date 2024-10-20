@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b4c97e1623341e78aba34522f159ab4d1414b4908618f1dcde59063f9e781cc
-size 801
+import { useGetMyInfo } from '@hooks/user/useGetMyInfo';
+import PersonStatisticSection from './PersonStatisticSection';
+
+const DepartmentPersonStatistics = () => {
+  // 내 정보
+  const { myInfo, myInfoPending, myInfoLoading, isGetMyInfoError, myInfoError } = useGetMyInfo({
+    isLoggedIn: localStorage.getItem('accessToken') !== null
+  });
+
+  return (
+    <section>
+      <div className="token-content mt-3">
+        {
+          // 선택된 사람이 있을 경우
+          myInfo && <PersonStatisticSection member_id={myInfo.member_id} />
+        }
+        {isGetMyInfoError && <div>Error: {myInfoError?.message || 'Something Went Wrong'}</div>}
+        {(myInfoPending || myInfoLoading) && <div>Loading...</div>}
+      </div>
+    </section>
+  );
+};
+
+export default DepartmentPersonStatistics;

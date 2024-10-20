@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6eb7eba829c2152565af0a2e87792ec0b8f6295256580b9423dc97a44b4ddc56
-size 752
+from typing import Optional, List, Union, Dict
+
+from pydantic import BaseModel
+
+
+class CeleryTaskResponse(BaseModel):
+    task_name: Optional[str] = None
+    task_status: str
+    task_arguments: Optional[dict] = None
+    result_data_type: Optional[str] = None
+    result_data: Optional[Union[List[str], str, Dict]] = None
+    message: Optional[str] = None
+    return_code: Optional[int] = None
+
+    def __init__(self, **data):
+        # 불필요한 키 제거
+        if 'task_arguments' in data and data['task_arguments'] is not None:
+            keys_to_remove = ["images", "init_image_files", "mask_image_files", "masks"]
+            for key in keys_to_remove:
+                data['task_arguments'].pop(key, None)
+
+        super().__init__(**data)

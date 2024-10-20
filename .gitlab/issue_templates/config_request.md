@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eb63dac804891cbd2d6b21340f56b50d5816830e7a85a71195c4d5d856d65cde
-size 528
+---
+name: Config
+title: "[Config] TITLE"
+labels: 🔧Config📦
+assignees: ""
+---
+
+## 🔧 Description
+
+<!-- 변경된 환경설정에 대해 작성해 주세요. -->
+<!-- ### 환경설정 추가/변경 -->
+<!-- ### 라이브러리 추가/변경 -->
+
+## ❓Why❓
+
+<!-- 추가한 이유에 대해 작성해 주세요. -->
+<!-- ### 환경설정 추가/변경 -->
+<!-- ### 라이브러리 추가/변경 -->
+
+## 📝 Check Point
+
+<!-- 작성 내용 리스트로 작성해주세요. -->
+
+- [x] 작성 내용 1
+- [ ] 작성 내용 2

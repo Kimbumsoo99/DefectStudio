@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:57fa36b626e0765a65284e201db95ae27352236a773666cd81926e94121bf967
-size 693
+import { useState, useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
+
+const PrivateRoute = ({ children }: { children: JSX.Element }) => {
+  const [token, setToken] = useState<string | null>(localStorage.getItem('accessToken'));
+
+  // 토큰 변경 감지
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setToken(localStorage.getItem('accessToken'));
+    };
+
+    // localStorage가 변경될 때 감지
+    window.addEventListener('storage', handleStorageChange);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
+
+  return token ? children : <Navigate to="/login" />;
+};
+
+export default PrivateRoute;

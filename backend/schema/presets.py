@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c6393aa41b50b2248fda00725f162138c0d02e90cd5f246cba6f6147d7e989f8
-size 1242
+from datetime import datetime
+from typing import Optional
+
+from beanie import Document
+from pydantic import BaseModel
+
+from enums import GenerationType
+
+
+class GenerationPreset(Document):
+    preset_title: str
+    generation_type: GenerationType
+    model: Optional[str] = None
+    prompt: Optional[str] = None
+    negative_prompt: Optional[str] = None
+    width: Optional[int] = None
+    height: Optional[int] = None
+    batch_count: Optional[int] = None
+    batch_size: Optional[int] = None
+    strength: Optional[float] = None
+    guidance_scale: Optional[float] = None
+    num_inference_steps: Optional[int] = None
+    scheduler: Optional[str] = None
+    seed: Optional[int] = None
+    member_id: Optional[int] = None
+    date: datetime = datetime.today()
+
+class GenerationPresetUpdate(BaseModel):
+    model: Optional[str] = None
+    prompt: Optional[str] = None
+    negative_prompt: Optional[str] = None
+    width: Optional[int] = None
+    height: Optional[int] = None
+    batch_count: Optional[int] = None
+    batch_size: Optional[int] = None
+    strength: Optional[float] = None
+    guidance_scale: Optional[float] = None
+    num_inference_steps: Optional[int] = None
+    scheduler: Optional[str] = None
+    seed: Optional[int] = None

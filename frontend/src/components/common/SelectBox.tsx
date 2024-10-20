@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca328137ca5812d8b4c23b48ce88cfeca9758b431a532923ea5c94626f5ffd02
-size 654
+import { Select, Form } from 'antd';
+
+interface SelectBoxProps {
+  value: string;
+  onChange: (value: string) => void;
+  options: { value: string; label: string }[];
+  label: string;
+  labelFontWeight?: string;
+}
+
+const SelectBox = ({ value, onChange, options, label, labelFontWeight = 'font-semibold' }: SelectBoxProps) => {
+  return (
+    <div className="mb-5">
+      <Form.Item label={<span className={`text-[14px] ${labelFontWeight} text-[#222]`}>{label}</span>}>
+        <Select value={value} onChange={onChange} options={options} className="w-full" placeholder="Select an option" />
+      </Form.Item>
+    </div>
+  );
+};
+
+export default SelectBox;

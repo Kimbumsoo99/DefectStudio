@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7de1c6a18dd700baa68311893a33a3285941883c5a25ffa458188f5aec7d366c
-size 604
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+interface ModelState {
+  taskId: string[];
+}
+
+const initialState: ModelState = {
+  taskId: []
+};
+
+const modelSlice = createSlice({
+  name: 'modelOutput',
+  initialState,
+  reducers: {
+    addTaskId: (state, action: PayloadAction<string>) => {
+      state.taskId.push(action.payload);
+    },
+    removeTaskId: (state, action: PayloadAction<string>) => {
+      state.taskId = state.taskId.filter((id) => id !== action.payload);
+    }
+  }
+});
+
+export const { addTaskId, removeTaskId } = modelSlice.actions;
+
+export default modelSlice.reducer;
