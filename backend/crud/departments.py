@@ -1,9 +1,3 @@
-from fastapi import Depends
-from dependencies import get_db
-from models import Department
-from schema.departments import DepartmentRead
-
-def get_departments(session: Depends(get_db)):
-    departments = session.query(Department).all()
-    department_reads = [DepartmentRead.from_orm(department) for department in departments]
-    return department_reads
+version https://git-lfs.github.com/spec/v1
+oid sha256:8bc08509e3f7a8ff7da72bfc4d94c1453cc914806eeb069d9906cbc5a4459804
+size 932
